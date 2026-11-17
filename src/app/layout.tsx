@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
-import { SiteEffects } from "@/components/site-effects";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -18,12 +17,13 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Open Pages — A Free Reading Initiative for Nigeria",
+  title: "Free Reading Initiative",
   description:
-    "A free digital library for Nigeria. Read, listen and learn — books, audiobooks, research and open educational resources, free for everyone. Pilot launching in Ikulu, Lagos.",
+    "A free reading initiative for Nigeria. Read, listen and learn — books, audiobooks, research and open educational resources, free for everyone. Pilot launching in Ikulu, Lagos.",
   openGraph: {
-    title: "Open Pages — A world of knowledge. Open to everyone.",
-    description: "A free reading initiative for Nigeria, starting in Ikulu, Lagos.",
+    title: "Free Reading Initiative — A world of knowledge. Open to everyone.",
+    description:
+      "A free reading initiative for Nigeria, starting in Ikulu, Lagos.",
     type: "website",
   },
 };
@@ -31,10 +31,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${plusJakarta.variable} ${fraunces.variable}`}>
-      <body className="nojs">
-        {children}
-        <SiteEffects />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

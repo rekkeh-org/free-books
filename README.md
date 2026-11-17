@@ -1,6 +1,6 @@
-# Open Pages
+# Free Reading Initiative
 
-A free reading initiative for Nigeria — Next.js App Router landing site.
+Next.js app that serves the Free Reading Initiative landing page (`public/updated-design.html`) at `/`.
 
 ## Getting started
 
